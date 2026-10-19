@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Tour Website</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Contact Us</h1>
+        <h4>We'd love to hear from you!</h4>
+ <form
+class="input-container" 
+action="https://formsubmit.co/Abhaychauhan3204@gmail.com"
+
+            method="POST"
+        >
+            <input type="hidden" name="_subject" value="New Contact Message">
+            <input type="hidden" name="_template" value="table">
+
+            <div class="styled-input wide">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Full Name</label>
+            </div>
+
+            <div class="styled-input">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email Address</label>
+            </div>
+
+            <div class="styled-input">
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="[0-9+\-\s()]{7,20}"
+                    required
+                >
+                <label for="phone">Phone Number</label>
+            </div>
+
+            <div class="styled-input wide">
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message →</button>
+        </form>
+
+        <a href="./index.html" class="back-link">← Back to Home</a>
+    </main>
+
+</body>
+</html>

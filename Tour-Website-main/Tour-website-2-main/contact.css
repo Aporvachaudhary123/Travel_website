@@ -1,0 +1,198 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    background-color: #444442;
+    color: white;
+    font-family: 'Roboto', Arial, sans-serif;
+    min-height: 100vh;
+    padding: 70px 20px 40px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Heading */
+h1 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    font-size: clamp(38px, 7vw, 68px);
+    color: white;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+h4 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #bdbdbd;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Form Layout */
+.input-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin: 0 auto 25px;
+}
+
+/* Input Wrapper */
+.styled-input {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.styled-input.wide {
+    grid-column: 1 / -1;
+}
+
+/* Input Fields */
+input,
+textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #555;
+    border-radius: 7px;
+    background-color: #2d2d2d;
+    color: white;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    padding: 25px 18px 12px;
+    outline: none;
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+input {
+    height: 65px;
+}
+
+textarea {
+    min-height: 155px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+/* Focus Effect */
+input:focus,
+textarea:focus {
+    border-color: #4b8cfb;
+    box-shadow: 0 0 0 3px rgba(75, 140, 251, 0.15);
+}
+
+/* Floating Labels */
+.styled-input label {
+    position: absolute;
+    top: 23px;
+    left: 18px;
+    color: #999;
+    font-size: 15px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.styled-input input:focus ~ label,
+.styled-input textarea:focus ~ label,
+.styled-input input:valid ~ label,
+.styled-input textarea:valid ~ label {
+    top: 7px;
+    font-size: 11px;
+    color: #4b8cfb;
+}
+
+/* Submit Button */
+.submit-btn {
+    grid-column: 1 / -1;
+    justify-self: end;
+    display: inline-block;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px;
+    background-color: #4b8cfb;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn:hover {
+    background-color: #3478ed;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(75, 140, 251, 0.25);
+}
+
+.submit-btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+/* Status Message */
+#form-status {
+    grid-column: 1 / -1;
+    color: #7ee7a5;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Back to Home Link */
+.back-link {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #4b8cfb;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 40px 16px 30px;
+    }
+
+    .input-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .styled-input.wide,
+    .submit-btn,
+    #form-status {
+        grid-column: 1;
+    }
+
+    .submit-btn {
+        width: 100%;
+        justify-self: stretch;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+}
+```
